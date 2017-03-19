@@ -1,0 +1,19 @@
+{% extends "./layout/layout.html" %}
+{% block content %}
+    <h3>Jinja2</h3>
+    <p>
+        {% if message %}
+            {{ message }}
+        {% else %}
+            特に何もありません。
+        {% endif %}
+    </p>
+
+    <form method="POST" action="/upload" enctype = "multipart/form-data">
+      <input type="file" name="file">
+      <input type="text" name="name" size="30">
+      <input type="submit" value="send" name="action">
+    </form>
+
+{% endblock %}
+
